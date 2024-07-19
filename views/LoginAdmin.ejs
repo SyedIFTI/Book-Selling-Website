@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+          .btn {
+        transition: background-color 0.3s, transform 0.2s;
+        }    
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full md:w-1/3 p-8">
+        <h2 class="text-2xl font-bold mb-6 text-center">Ebook Admin</h2>
+        <form autocomplete="off" action="/admin/adminlogin" method="POST" class="space-y-4">
+          
+            <div>
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-700">
+            </div>
+            <div>
+                <label for="password" class="block text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-700">
+            </div>
+            <div>
+                <button class="btn mt-4 text-semibold text-white bg-zinc-900 text-white px-4 py-2 rounded-md shadow-md transform hover:scale-105 hover:border-2 hover:border-zinc-900 w-full hover:bg-white hover:text-zinc-900 hover:font-bold focus:outline-none">
+                   Login
+                </button>                </div>
+        </form>
+   <div/>
+</body>
+</html>

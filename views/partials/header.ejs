@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="text-zinc-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-zinc-900 font-bold text-xl">Ebook.io</div>
+            <ul class="flex space-x-4 items-center">
+                <li><a href="/" class="hover:text-indigo-700">Home</a></li>
+                <li><a href="/books" class="hover:text-indigo-700">Books</a></li>
+                <li><a href="#" class="hover:text-indigo-700">About</a></li>
+                <li><a href="#" class="hover:text-indigo-700">Contact</a></li>
+
+    <%var loggedin = typeof loggedin !=='undefined'?loggedin : true%>
+    <% if (loggedin) { %>
+        <li><a href="/cart">Cart</a></li>
+        <a href="/user/logout" class="px-4 py-2 bg-red-600 text-white rounded">Logout</a>
+      <% } else { %>
+        <a href="/login" class="btn font-bold text-white bg-zinc-900 px-4 py-2 rounded-md shadow-md hover:font-bold hover:bg-white hover:text-zinc-900 focus:outline-none">LogIn</a>
+        <a href="/signup" class="btn font-bold text-white bg-zinc-900 px-4 py-2 rounded-md shadow-md hover:font-bold hover:bg-white hover:text-zinc-900 focus:outline-none">SignUp</a>
+      <% } %>
+                </ul>
+         
+        </div>
+    </nav>
+</body>
+</html>

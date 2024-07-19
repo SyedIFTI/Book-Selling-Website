@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<style>
+      
+     .btn {
+        transition: background-color 0.3s, transform 0.2s;
+        }    
+</style>
+</head>
+<body>
+</head>
+</head>
+<body>
+  <div>
+    <%- include('./partials/header') %>
+  </div>
+   <div class="w-full h-96 p-10 flex">
+<div class="w-1/2 h-full p-20 ">
+<h1 class="font-bold text-5xl mb-3">Welcome to Ebook</h1>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam praesentium dolore perspiciatis et amet eaque!</p>
+<button class="btn mt-4 text-semibold text-white bg-zinc-900 text-white px-4 py-2 rounded-md shadow-md transform hover:scale-105 hover:border-2 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 hover:font-bold focus:outline-none">
+    Read More
+</button>
+</div>
+<div class="w-1/2 h-full flex justify-center rounded-lg bg-zinc-800">
+<img src="/images/Ebook.png" alt="" class="w-1/2 h-full">
+</div>
+   </div>
+   <h1 class="text-5xl mt-5 mb-3 font-bold px-3 ">New Arrivals</h1>
+   <hr>
+   <div class="container w-full h-96 flex mt-4 px-10">
+    <div class="w-1/2 h-full flex justify-center items-center">
+      <img src="/images/atomichabit.jpeg"class="w-[70%] h-full" alt="">
+    </div>
+    <div class="w-1/2 h-full p-20 border-2 shadow-lg border-zinc-200 rounded-lg ">
+      <h1 class="text-5xl font-bold mb-2">Atomic Habits</h1>
+      <p>An easy and proven way to build good habits and break bad ones</p>
+      <h3 class="mt-5 text-xl">Author: <span class="text-yellow-500  font">James Clear</span> </h3>  
+      <button class="btn mt-4 text-semibold text-white bg-zinc-900 text-white px-4 py-2 rounded-md shadow-md transform hover:scale-105 hover:border-2 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 hover:font-bold focus:outline-none">
+        Buy Now
+    </button>
+    </div>
+    
+  </div>
+  <div class="container w-full h-96 flex mt-10 px-10">
+    
+    <div class="w-1/2 h-full p-20 border-2 shadow-lg border-zinc-200 rounded-lg ">
+      <h1 class="text-5xl font-bold mb-2">Rich Dad Poor Dad</h1>
+      <p>What the rich teach their kids about Money - That the Poor and Middle Class do not!</p>
+      <h3 class="mt-5 text-xl">Author: <span class="text-yellow-500  font">Robert T.Kiyosaki</span> </h3>  
+      <button class="btn mt-4 text-semibold text-white bg-zinc-900 text-white px-4 py-2 rounded-md shadow-md transform hover:scale-105 hover:border-2 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 hover:font-bold focus:outline-none">
+        Buy Now
+    </button>
+    </div>
+    <div class="w-1/2 h-full flex justify-center items-center">
+        <img src="/images/richdad.png"class="w-[60%] h-full" alt="">
+      </div>
+  </div>
+  <div class="container w-full h-96 flex mt-10 px-10">
+    <div class="w-1/2 h-full flex justify-center items-center">
+      <img src="/images/specail Offer/book2.jpeg"class="w-[50%] h-full" alt="">
+    </div>
+    <div class="w-1/2 p-20 border-2 shadow-lg border-zinc-200 rounded-lg ">
+      <h1 class="text-5xl font-bold mb-2">Heir Of Fire</h1>
+      <p>An easy and proven way to build good habits and break bad ones</p>
+      <h3 class="mt-5 text-xl">Author: <span class="text-yellow-500  font">Sarah J.Maas</span> </h3>  
+      <button class="btn mt-4 text-semibold text-white bg-zinc-900 text-white px-4 py-2 rounded-md shadow-md transform hover:scale-105 hover:border-2 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 hover:font-bold focus:outline-none">
+        Buy Now
+    </button>
+    </div>
+    
+  </div>
+  <div class="container mx-auto px-4 py-8 mt-5">
+    <h1 class="text-3xl font-bold text-5xl mb-8">Special Offer</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="/images/specail Offer/book1.jpg" alt="Card Image 2" class=" mx-auto h-48 ">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2"><%=product[1].name%></h2>
+                <p>Rs<%=product[1].price%></p>
+                    </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="/images/specail Offer/book5.jpg" alt="Card Image 2" class=" mx-auto h-48 ">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2"><%=product[5].name%></h2>
+                <p>Rs <%=product[5].price%></p>               
+            </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="/images/specail Offer/book3.jpg" alt="Card Image 2" class=" mx-auto h-48 ">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2"><%=product[3].name%></h2>
+                <p>Rs <%=product[3].price%></p>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="/images/specail Offer/book4.jpg" alt="Card Image 2" class=" mx-auto h-48 ">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2"><%=product[4].name%></h2>
+            <p>Rs <%=product[4].price%></p>   
+            </div>
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+    <%- include('./partials/footer') %>
+  
+</body>
+</html>

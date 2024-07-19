@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <%- include('./partials/header') %>
+  <div class="Main w-full p-10">
+    <div class="w-full px-10 py-10 bg-white shadow-xl">
+        <h1 class="text-3xl font-semibold mb-2">Shopping Cart</h1>
+        <hr>
+        <div class="mt-3 w-full">
+    <%if(createproduct.length>0){%>
+        <%createproduct.forEach(function(value){%>
+            <div class="cartcontainer flex gap-5 mt-4 mb-4 items-start">
+                <div class="flex justify-center w-60">
+                    <img src="data:images/jpeg;base64,<%= value.images.toString('base64') %>" alt="Imgae" class="w-full h-[10]rem]">
+                </div>
+                <div class="detailscontainer w-full flex justify-between">
+                    <div>
+                        <h1 class="text-3xl font font-semibold" ><%=value.name%></h1>
+                        <p class="text-zinc-600 mb-2"><%=value.slogan%></p>
+                        <p>Actual Price: Rs <%=value.price%> </p>
+                        <h3>Shipment Fees: Rs 100</h3>
+                        <h3>Discount: Rs <%=value.discount%> </h3>
+                    <h3>Quantity</h3>
+                    <a href="/deleteproduct/<%=value.product_id%>" class="text-red-500 text-sm ">Delete</a>    
+                    </div>
+                    <div class="font-bold">
+                        <h1 class="font-bold text-xl">Total Ammount</h1>
+                       <h2 class="font-bold ">Rs <%=value.totalAmmount%></h2>
+                    </div>
+                </div>
+                </div>
+                <hr>    
+            <%})%>
+            <h1 class="text-center font-bold text-3xl"> Subtotal: Rs <%=subtotal%> </h1>
+        <%}
+    else{%>
+        <h1>No Items Added</h1>
+        <%}
+        %>
+     
+
+
+
+
+        
+        <hr>
+    
+        
+        
+        </div>    
+        </div>
+  </div>
+</body>
+</html>
